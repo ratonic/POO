@@ -1,8 +1,9 @@
 package com.example.market.infraestructure.crud;
 
-import org.springframework.data.repository.CrudRepository;
-
 import com.example.market.infraestructure.entity.Cliente;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-public interface ClienteRepository extends CrudRepository<Cliente, Long> {
+@Repository
+public interface ClienteRepository extends JpaRepository<Cliente, Long> {
 }
