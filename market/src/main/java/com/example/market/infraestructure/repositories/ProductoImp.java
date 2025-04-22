@@ -25,4 +25,10 @@ public class ProductoImp implements IProduct{
         List<Producto> productos = productoRepository.findAll();
         return productoMapper.toProductsDTO(productos);
     }
+
+    @Override
+    public ProductDTO save(ProductDTO productDTO) {
+        Producto producto = productoMapper.toProducto(productDTO);
+        return productoMapper.toProductDTO(productoRepository.save(producto));
+    }
 }

@@ -8,6 +8,15 @@ public class ProductDTO {
     private String name;
     private String description;
     private Double price;
+    private Integer stock;
+
+
+    public Integer getStock() {
+        return stock;
+    }
+    public void setStock(Integer stock) {
+        this.stock = stock;
+    }
 
     public void setId(Long id) {
         this.id = id;

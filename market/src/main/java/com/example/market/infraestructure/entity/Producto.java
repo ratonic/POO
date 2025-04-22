@@ -17,6 +17,7 @@ public class Producto {
     private String nombre;
     private String descripcion;
     private Double precio;
+    private Integer stock;    // Cantidad disponible del producto
 
     
     
@@ -25,10 +26,11 @@ public class Producto {
     }
 
 
-    public Producto(String nombre, String descripcion, Double precio) {
+    public Producto(String nombre, String descripcion, Double precio, Integer stock) {
         this.nombre = nombre;
         this.descripcion = descripcion;
         this.precio = precio;
+        this.stock = stock; // Asignar el stock al crear el producto
     }
 
 
@@ -62,6 +64,14 @@ public class Producto {
 
     public void setPrecio(Double precio) {
         this.precio = precio;
+    }
+
+    public Integer getStock() {
+        return stock;
+    }
+
+    public void setStock(Integer stock) {
+        this.stock = stock;
     }
     
 }
